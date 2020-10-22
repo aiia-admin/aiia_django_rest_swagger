@@ -1,4 +1,5 @@
 import coreapi
+import django
 from coreapi.compat import force_bytes
 from django.shortcuts import render, resolve_url
 from openapi_codec import OpenAPICodec as _OpenAPICodec
@@ -47,7 +48,11 @@ class OpenAPIRenderer(BaseRenderer):
 class SwaggerUIRenderer(BaseRenderer):
     media_type = 'text/html'
     format = 'swagger'
+    django_version = django.VERSION
     template = 'rest_framework_swagger/index.html'
+    if django_version[0] >= 3:
+        template = 'rest_framework_swagger/new_index.html'
+
     charset = 'utf-8'
 
     def render(self, data, accepted_media_type=None, renderer_context=None):
