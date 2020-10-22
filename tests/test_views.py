@@ -18,7 +18,7 @@ class TestGetSwaggerView(TestCase):
 
     def test_title_and_urlpassed_to_schema_generator(self):
         title = 'Vandelay'
-        url = 'https://github.com/aiia-admin/django-rest-swagger'
+        url = 'https://github.com/aiia-admin/aiia_django_rest_swagger'
         urlconf = 'fizz'
         patterns = []
         view = self.sut(

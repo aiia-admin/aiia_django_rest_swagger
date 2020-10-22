@@ -1,7 +1,7 @@
 {
   "name": "Django REST Swagger Example",
   "description": "An example of Django REST Swagger using the Django REST Framework Tutorial app",
-  "repository": "https://github.com/marcgibbons/django-rest-swagger",
+  "repository": "https://github.com/aiia-admin/aiia_django_rest_swagger",
   "keywords": ["django", "swagger", "rest", "framework"],
   "env": {
     "HEROKU": "1",

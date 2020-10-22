@@ -49,7 +49,7 @@ class SwaggerUIRenderer(BaseRenderer):
     media_type = 'text/html'
     format = 'swagger'
     django_version = django.VERSION
-    template = 'django_rest_swagger/index.html'
+    template = 'aiia_django_rest_swagger/index.html'
 
     charset = 'utf-8'
 

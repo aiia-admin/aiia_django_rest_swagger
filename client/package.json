@@ -1,5 +1,5 @@
 {
-  "name": "django-rest-swagger",
+  "name": "aiia_django_rest_swagger",
   "version": "1.0.0",
   "description": "Template generation for Django REST Swagger",
   "main": "index.js",

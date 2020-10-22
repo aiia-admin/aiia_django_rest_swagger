@@ -1,6 +1,6 @@
 # Change Log
 
-## [2.2.0](https://github.com/marcgibbons/django-rest-swagger/tree/2.2.0) (2018-04-30)
+## [2.3.0](https://github.com/marcgibbons/django-rest-swagger/tree/2.2.0) (2018-04-30)
 [Full Changelog](https://github.com/marcgibbons/django-rest-swagger/compare/2.1.2...2.2.0)
 
 **Merged pull requests:**

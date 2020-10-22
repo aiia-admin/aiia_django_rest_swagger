@@ -3,7 +3,7 @@ from coreapi.compat import force_bytes
 from django.test import TestCase
 import simplejson as json
 
-from django_rest_swagger import renderers
+from aiia_django_rest_swagger import renderers
 from ..compat.mock import MagicMock, patch
 
 
@@ -26,7 +26,7 @@ class TestOpenAPICodec(TestCase):
     def test_encode_generates_swagger_object_when_given_valid_document(self):
         expected = {'fizz': 'buzz'}
         with patch(
-            'django_rest_swagger.renderers.generate_swagger_object',
+            'aiia_django_rest_swagger.renderers.generate_swagger_object',
             return_value={'fizz': 'buzz'}
         ):
             result = self.sut(coreapi.Document())
@@ -36,7 +36,7 @@ class TestOpenAPICodec(TestCase):
     def test_encode_adds_extra_data_provided_to_swagger_object(self):
         expected = {'foo': 'bar'}
         with patch(
-            'django_rest_swagger.renderers.generate_swagger_object',
+            'aiia_django_rest_swagger.renderers.generate_swagger_object',
             return_value={}
         ):
             result = self.sut(coreapi.Document(), **expected)
@@ -60,7 +60,7 @@ class TestOpenAPIRenderer(TestCase):
     def test_format(self):
         self.assertEqual('openapi', self.sut.format)
 
-    @patch('django_rest_swagger.renderers.OpenAPICodec.encode')
+    @patch('aiia_django_rest_swagger.renderers.OpenAPICodec.encode')
     def test_render_encodes_customizations(self, encode_mock):
         data = coreapi.Document()
         renderer_context = {
@@ -89,7 +89,7 @@ class TestGetCustomizations(TestCase):
     def setUp(self):
         self.sut = renderers.OpenAPIRenderer().get_customizations
 
-        settings_patcher = patch('django_rest_swagger.renderers.settings')
+        settings_patcher = patch('aiia_django_rest_swagger.renderers.settings')
         self.swagger_settings = settings_patcher.start()
         self.addCleanup(settings_patcher.stop)
 

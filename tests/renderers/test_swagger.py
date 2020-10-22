@@ -1,7 +1,7 @@
 from django.test import TestCase
 import simplejson as json
 
-from django_rest_swagger.renderers import SwaggerUIRenderer
+from aiia_django_rest_swagger.renderers import SwaggerUIRenderer
 from ..compat.mock import patch, MagicMock
 
 
@@ -11,13 +11,13 @@ class TestSwaggerUIRenderer(TestCase):
         self.renderer_context = {'request': MagicMock()}
 
         swagger_settings_patcher = patch(
-            'django_rest_swagger.renderers.settings',
+            'aiia_django_rest_swagger.renderers.settings',
         )
         self.swagger_settings = swagger_settings_patcher.start()
         self.addCleanup(swagger_settings_patcher.stop)
 
         openapi_patcher = patch(
-            'django_rest_swagger.renderers.OpenAPIRenderer'
+            'aiia_django_rest_swagger.renderers.OpenAPIRenderer'
         )
         self.openapi_mock = openapi_patcher.start()
         self.addCleanup(openapi_patcher.stop)
@@ -30,14 +30,14 @@ class TestSwaggerUIRenderer(TestCase):
 
     def test_template(self):
         self.assertEqual(
-            'django_rest_swagger/index.html',
+            'aiia_django_rest_swagger/index.html',
             self.sut.template
         )
 
     def test_charset(self):
         self.assertEqual('utf-8', self.sut.charset)
 
-    @patch('django_rest_swagger.renderers.render')
+    @patch('aiia_django_rest_swagger.renderers.render')
     def test_render(self, render_mock):
         data = MagicMock()
         with patch.object(self.sut, 'set_context') as context_mock:

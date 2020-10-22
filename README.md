@@ -12,14 +12,14 @@ Full documentation: http://marcgibbons.github.io/django-rest-swagger/
 
 ## Installation
 
-1. `pip install django-rest-swagger`
+1. `pip install aiia_django_rest_swagger`
 
-2. Add `django_rest_swagger` to your `INSTALLED_APPS` setting:
+2. Add `aiia_django_rest_swagger` to your `INSTALLED_APPS` setting:
 
     ```python
    INSTALLED_APPS = [
        ...
-       'django_rest_swagger',
+       'aiia_django_rest_swagger',
    ]
    ```
 
@@ -65,7 +65,7 @@ Contributions are welcome and are encouraged!
 Many thanks to Tom Christie & all the contributors who have developed [Django REST Framework](http://django-rest-framework.org/)
 
 [build-status]: https://travis-ci.org/marcgibbons/django-rest-swagger
-[pypi]: https://pypi.python.org/pypi/django-rest-swagger
-[license]: https://pypi.python.org/pypi/django-rest-swagger/
+[pypi]: https://pypi.python.org/pypi/aiia_django_rest_swagger
+[license]: https://pypi.python.org/pypi/aiia_django_rest_swagger/
 [docs-badge]: https://readthedocs.io/projects/django-rest-swagger/badge/
 [docs]: http://django-rest-swagger.readthedocs.io/

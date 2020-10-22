@@ -1,6 +1,6 @@
 [run]
 branch = True
-source = django_rest_swagger
+source = aiia_django_rest_swagger
 
 [report]
 exclude_lines =
