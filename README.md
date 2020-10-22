@@ -1,19 +1,8 @@
-# Django REST Swagger: deprecated (2019-06-04)
-
-This project is no longer being maintained. Please consider **drf-yasg** as an alternative/successor. I haven't personally used it, but it looks feature-complete and is actively maintained.
-
-### https://github.com/axnsan12/drf-yasg
-
-Thanks for all the support and contributions over the years. Special thanks to [Lights on Software](https://lightsonsoftware.com/), [Lincoln Loop](https://lincolnloop.com/) and BNOTIONS for generously donating time to work on this project :heart:.
-
----
+# Django REST Swagger
 
 [![build-status-badge]][build-status]
-[![codecov](https://codecov.io/gh/marcgibbons/django-rest-swagger/branch/master/graph/badge.svg)](https://codecov.io/gh/marcgibbons/django-rest-swagger)
 [![pypi-version]][pypi]
 
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 
 #### An API documentation generator for Swagger UI and Django REST Framework
@@ -25,14 +14,14 @@ Full documentation: http://marcgibbons.github.io/django-rest-swagger/
 
 1. `pip install django-rest-swagger`
 
-2. Add `rest_framework_swagger` to your `INSTALLED_APPS` setting:
+2. Add `django_rest_swagger` to your `INSTALLED_APPS` setting:
 
     ```python
-        INSTALLED_APPS = (
-            ...
-            'rest_framework_swagger',
-        )
-    ```
+   INSTALLED_APPS = [
+       ...
+       'django_rest_swagger',
+   ]
+   ```
 
 ## Rendering Swagger Specification and Documentation
 
@@ -59,7 +48,7 @@ urlpatterns = [
 ## Requirements
 * Django 1.8+
 * Django REST framework 3.5.1+
-* Python 2.7, 3.5, 3.6
+* Python 2.7, 3.5, 3.6, 3.7, 3.8
 
 
 ## Testing
@@ -75,10 +64,7 @@ Contributions are welcome and are encouraged!
 ## Special Thanks
 Many thanks to Tom Christie & all the contributors who have developed [Django REST Framework](http://django-rest-framework.org/)
 
-
-[build-status-badge]: https://travis-ci.org/marcgibbons/django-rest-swagger.svg?branch=master
 [build-status]: https://travis-ci.org/marcgibbons/django-rest-swagger
-[pypi-version]: https://img.shields.io/pypi/v/django-rest-swagger.svg
 [pypi]: https://pypi.python.org/pypi/django-rest-swagger
 [license]: https://pypi.python.org/pypi/django-rest-swagger/
 [docs-badge]: https://readthedocs.io/projects/django-rest-swagger/badge/
