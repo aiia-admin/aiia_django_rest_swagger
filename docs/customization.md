@@ -2,7 +2,7 @@
 
 ## Template
 The template used for the SwaggerUIRenderer can be customized by overriding
-`rest_framework_swagger/index.html`.
+`django_rest_swagger/index.html`.
 
 Here are a few basic areas which can be customized:
 

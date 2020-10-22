@@ -1,7 +1,7 @@
 from django.test import TestCase
 import simplejson as json
 
-from rest_framework_swagger.renderers import SwaggerUIRenderer
+from django_rest_swagger.renderers import SwaggerUIRenderer
 from ..compat.mock import patch, MagicMock
 
 
@@ -11,13 +11,13 @@ class TestSwaggerUIRenderer(TestCase):
         self.renderer_context = {'request': MagicMock()}
 
         swagger_settings_patcher = patch(
-            'rest_framework_swagger.renderers.settings',
+            'django_rest_swagger.renderers.settings',
         )
         self.swagger_settings = swagger_settings_patcher.start()
         self.addCleanup(swagger_settings_patcher.stop)
 
         openapi_patcher = patch(
-            'rest_framework_swagger.renderers.OpenAPIRenderer'
+            'django_rest_swagger.renderers.OpenAPIRenderer'
         )
         self.openapi_mock = openapi_patcher.start()
         self.addCleanup(openapi_patcher.stop)
@@ -30,14 +30,14 @@ class TestSwaggerUIRenderer(TestCase):
 
     def test_template(self):
         self.assertEqual(
-            'rest_framework_swagger/index.html',
+            'django_rest_swagger/index.html',
             self.sut.template
         )
 
     def test_charset(self):
         self.assertEqual('utf-8', self.sut.charset)
 
-    @patch('rest_framework_swagger.renderers.render')
+    @patch('django_rest_swagger.renderers.render')
     def test_render(self, render_mock):
         data = MagicMock()
         with patch.object(self.sut, 'set_context') as context_mock:
@@ -95,19 +95,6 @@ class TestSwaggerUIRenderer(TestCase):
         self.assertEqual(
             openapi_render.return_value.decode.return_value,
             self.renderer_context['spec']
-        )
-
-    def test_get_auth_urls(self):
-        self.swagger_settings.LOGIN_URL = '/my-login'
-        self.swagger_settings.LOGOUT_URL = '/my-logout'
-        result = self.sut.get_auth_urls()
-
-        self.assertDictEqual(
-            {
-                'LOGIN_URL': self.swagger_settings.LOGIN_URL,
-                'LOGOUT_URL': self.swagger_settings.LOGOUT_URL,
-            },
-            result
         )
 
     def test_get_auth_urls_when_none(self):

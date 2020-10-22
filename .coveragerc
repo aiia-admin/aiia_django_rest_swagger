@@ -1,6 +1,6 @@
 [run]
 branch = True
-source = rest_framework_swagger
+source = django_rest_swagger
 
 [report]
 exclude_lines =

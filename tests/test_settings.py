@@ -1,5 +1,5 @@
 from django.test import override_settings, TestCase
-from rest_framework_swagger import settings
+from django_rest_swagger import settings
 
 
 class TestSettings(TestCase):

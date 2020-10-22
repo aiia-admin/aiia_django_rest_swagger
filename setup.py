@@ -3,7 +3,7 @@ import os
 import sys
 import shutil
 from setuptools import setup
-from rest_framework_swagger import __version__ as VERSION
+from django_rest_swagger import __version__ as VERSION
 
 if sys.argv[-1] == 'publish':
     if os.system("wheel version"):
@@ -32,7 +32,7 @@ From pip:
 
 pip install django-rest-swagger
 
-Project @ https://github.com/marcgibbons/django-rest-swagger
+Project @ https://github.com/aiia-admin/django-rest-swagger
 Docs @ https://django-rest-swagger.readthedocs.io/
 """
 
@@ -49,15 +49,15 @@ setup(
         'Django>=1.8',
         'simplejson'
     ],
-    packages=['rest_framework_swagger'],
+    packages=['django_rest_swagger'],
     include_package_data=True,
-    license='FreeBSD License',
+    license='MIT',
     description='Swagger UI for Django REST Framework 3.5+',
     long_description=README,
     test_suite='tests',
-    author='Marc Gibbons',
-    author_email='marc_gibbons@rogers.com',
-    url='https://github.com/marcgibbons/django-rest-swagger',
+    author='AiiA Solution',
+    author_email='technical@aiia-solutions.com',
+    url='https://github.com/aiia-admin/django-rest-swagger',
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
@@ -67,6 +67,8 @@ setup(
         'Framework :: Django :: 1.11',
         'Framework :: Django :: 2.0',
         'Framework :: Django :: 2.1',
+        'Framework :: Django :: 3.0',
+        'Framework :: Django :: 3.1',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Operating System :: OS Independent',
@@ -76,6 +78,8 @@ setup(
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
         'Topic :: Internet :: WWW/HTTP',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
     ],

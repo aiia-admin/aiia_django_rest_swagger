@@ -49,9 +49,7 @@ class SwaggerUIRenderer(BaseRenderer):
     media_type = 'text/html'
     format = 'swagger'
     django_version = django.VERSION
-    template = 'rest_framework_swagger/index.html'
-    if django_version[0] >= 3:
-        template = 'rest_framework_swagger/new_index.html'
+    template = 'django_rest_swagger/index.html'
 
     charset = 'utf-8'
 
