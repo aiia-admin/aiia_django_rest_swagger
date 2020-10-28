@@ -1,5 +1,5 @@
 site_name: Django REST Swagger
-repo_url: https://github.com/marcgibbons/django-rest-swagger
+repo_url: https://github.com/marcgibbons/aiia_django_rest_swagger
 repo_name: GitHub
 site_description: Swagger UI / OpenAPI Documentation for Django REST Framework
 site_author: Marc Gibbons

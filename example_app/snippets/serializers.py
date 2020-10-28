@@ -1,6 +1,7 @@
 from rest_framework import serializers
-from snippets.models import Snippet
 from django.contrib.auth.models import User
+
+from example_app.snippets.models import Snippet
 
 
 class SnippetSerializer(serializers.HyperlinkedModelSerializer):

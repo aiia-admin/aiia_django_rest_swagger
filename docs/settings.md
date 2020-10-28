@@ -84,7 +84,7 @@ All key/val provided in this dictionary will be set on the request headers for
 all API requests.
 
 ## SwaggerUI Settings
-Below are some basic configuration settings for SwaggerUI. Note that for more advanced use cases, you may wish to write your own `django_rest_swagger/static/init.js` file.
+Below are some basic configuration settings for SwaggerUI. Note that for more advanced use cases, you may wish to write your own `aiia_django_rest_swagger/static/init.js` file.
 
 ### APIS_SORTER
 Set to `alpha` to enable alphabetical sorting.

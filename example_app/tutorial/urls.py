@@ -1,9 +1,7 @@
 from django.conf.urls import url, include
 from rest_framework.routers import DefaultRouter
-from django_rest_swagger.views import get_swagger_view
-
-from snippets import views
-
+from aiia_django_rest_swagger.views import get_swagger_view
+from example_app.snippets import views
 
 router = DefaultRouter()
 router.register(r'snippets', views.SnippetViewSet)

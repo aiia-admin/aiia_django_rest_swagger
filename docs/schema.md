@@ -25,7 +25,7 @@ Parameters:
 
 #### Example:
 ```python
-from django_rest_swagger.views import get_swagger_view
+from aiia_django_rest_swagger.views import get_swagger_view
 
 schema_view = get_swagger_view(title='My great API', url='/a-different-path')
 ```
@@ -45,7 +45,7 @@ from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework.schemas import SchemaGenerator
 from rest_framework.views import APIView
-from django_rest_swagger import renderers
+from aiia_django_rest_swagger import renderers
 
 
 class SwaggerSchemaView(APIView):
@@ -65,7 +65,7 @@ class SwaggerSchemaView(APIView):
 
 Example: function based view
 ```python
-from django_rest_swagger.renderers import OpenAPIRenderer, SwaggerUIRenderer
+from aiia_django_rest_swagger.renderers import OpenAPIRenderer, SwaggerUIRenderer
 from rest_framework.decorators import api_view, renderer_classes
 from rest_framework import response, schemas
 

@@ -3,7 +3,7 @@ import os
 import sys
 import shutil
 from setuptools import setup
-from django_rest_swagger import __version__ as VERSION
+from aiia_django_rest_swagger import __version__ as VERSION
 
 if sys.argv[-1] == 'publish':
     if os.system("wheel version"):
@@ -19,7 +19,7 @@ if sys.argv[-1] == 'publish':
     print("  git push --tags")
     shutil.rmtree('dist')
     shutil.rmtree('build')
-    shutil.rmtree('django_rest_swagger.egg-info')
+    shutil.rmtree('aiia_django_rest_swagger.egg-info')
     sys.exit()
 
 README = """
@@ -30,17 +30,17 @@ An API documentation generator for Swagger UI and Django REST Framework.
 Installation
 From pip:
 
-pip install django-rest-swagger
+pip install aiia_django_rest_swagger
 
-Project @ https://github.com/aiia-admin/django-rest-swagger
-Docs @ https://django-rest-swagger.readthedocs.io/
+Project @ https://github.com/aiia-admin/aiia_django_rest_swagger
+Docs @ https://aiia_django_rest_swagger.readthedocs.io/
 """
 
 # allow setup.py to be run from any path
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
-    name='django-rest-swagger',
+    name='aiia_django_rest_swagger',
     version=VERSION,
     install_requires=[
         'coreapi>=2.3.0',
@@ -49,7 +49,7 @@ setup(
         'Django>=1.8',
         'simplejson'
     ],
-    packages=['django_rest_swagger'],
+    packages=['aiia_django_rest_swagger'],
     include_package_data=True,
     license='MIT',
     description='Swagger UI for Django REST Framework 3.5+',
@@ -57,7 +57,7 @@ setup(
     test_suite='tests',
     author='AiiA Solution',
     author_email='technical@aiia-solutions.com',
-    url='https://github.com/aiia-admin/django-rest-swagger',
+    url='https://github.com/aiia-admin/aiia_django_rest_swagger',
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',

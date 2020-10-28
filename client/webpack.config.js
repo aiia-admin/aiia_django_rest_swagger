@@ -6,7 +6,7 @@ const devMode = process.env.NODE_ENV === 'dev';
 
 const distPath = path.resolve(
   __dirname,
-  '../django_rest_swagger/static/django_rest_swagger/bundles/'
+  '../aiia_django_rest_swagger/static/aiia_django_rest_swagger/bundles/'
 )
 
 module.exports = {
@@ -16,7 +16,7 @@ module.exports = {
   output: {
     path: distPath,
     filename: '[name].bundle.js',
-    publicPath: '/static/django_rest_swagger/bundles/',
+    publicPath: '/static/aiia_django_rest_swagger/bundles/',
   },
   module: {
     rules: [

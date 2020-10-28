@@ -17,7 +17,7 @@ app.use(
   ),
   proxy(
     [
-      '!/static/django_rest_swagger/bundles/**',
+      '!/static/aiia_django_rest_swagger/bundles/**',
     ],
     {
       target: 'http://localhost:8000',  // Assumes Django is running on 8000
