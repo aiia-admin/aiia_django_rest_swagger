@@ -61,3 +61,4 @@ def reload_settings(*args, **kwargs):  # pragma: no cover
 
 
 setting_changed.connect(reload_settings)
+

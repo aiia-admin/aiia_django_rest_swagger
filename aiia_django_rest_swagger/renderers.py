@@ -48,9 +48,7 @@ class OpenAPIRenderer(BaseRenderer):
 class SwaggerUIRenderer(BaseRenderer):
     media_type = 'text/html'
     format = 'swagger'
-    django_version = django.VERSION
     template = 'aiia_django_rest_swagger/index.html'
-
     charset = 'utf-8'
 
     def render(self, data, accepted_media_type=None, renderer_context=None):
